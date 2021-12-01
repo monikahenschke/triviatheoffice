@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+:root {
+    --orange: #fda058;
+    --yellow: #f6d365;
+    --white: #ffffff;
+    --black: #323232;
+
+}
+body {
+    background-image: linear-gradient(120deg, var(--orange), var(--yellow)) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container {
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 100%;
+    /* max-width: 1200px; */
+  }
+
+h1, h2 {
+    color: var(--white);
+    text-align: center;
+}
+h1 {
+    font-size:40px;
+}
+h2 {
+    font-size:35px;
+    padding: 20px 0;
+}
+button {
+    padding: 8px 12px;
+    border-radius: 30px;
+    background-color: var(--orange);
+    border: 1px solid var(--white);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer;
+
+}
+.dynamicContent {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+}
+.trivia__startButton {
+    padding: 11px 40px;
+
+}
+.trivia__description {
+    margin: 20px 0px 30px 0;
+    font-size: 19px;
+}
+
+.gradientTop {
+    background-image: linear-gradient(120deg, var(--yellow), var(--white)) ;
+    height: 2px;
+    width: 100%;
+    margin-top: 15px;
+}
+.trivia__quizTop p {
+    text-align: center;
+    font-size: 18px;
+}
+.trivia__quizTop {
+    background: var(--orange);
+
+}
+.trivia__startPage {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.trivia__question {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.trivia__answer {
+    padding: 5px 10px;
+}
+.trivia__answers {
+    display: inline;
+    margin-top: 10px;
+}
+.trivia__question p {
+    font-weight: 600;
+    color: var(--black);
+    padding: 5px 0px;
+    display: inline;
+    font-size: 17px;
+}
+.trivia__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.trivia__answer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+.trivia__answer {
+    position: relative;
+    padding-left: 35px;
+    margin: 10px;    
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* On mouse-over, add a grey background color */
+.trivia__answer:hover input ~ .trivia__checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .trivia__answer input:checked ~ .trivia__checkmark {
+    background-color:var(--orange);
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .trivia__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .trivia__answer input:checked ~ .trivia__checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .trivia__answer .trivia__checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+  .trivia__endQuizButton {
+      margin: 30px auto;
+      display: block;
+  }
+  .trivia__quizDiv {
+      padding-bottom: 30px;
+  }

@@ -1,0 +1,23 @@
+{
+  "name": "trivia",
+  "version": "1.0.0.",
+  "description": "the office",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode=development --watch"
+  },
+  "repository": "https://github.com/monikahenschke/trivia",
+  "author": "Monika Henschke",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "5.2.4",
+    "eslint": "7.25.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-plugin-import": "2.22.1",
+    "file-loader": "6.2.0",
+    "html-webpack-plugin": "5.3.1",
+    "style-loader": "2.0.0",
+    "webpack": "5.35.1",
+    "webpack-cli": "4.6.0"
+  }
+}
