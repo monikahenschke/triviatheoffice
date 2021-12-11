@@ -3,9 +3,6 @@ import { takeUsersAnswers } from './summary-page'
 const containerDiv = document.querySelector('.trivia__container');
 const quizDiv = document.createElement('div');
 const quizTopDiv = document.createElement('div');
-const gradientTop = document.createElement('div');
-const usersAnswers = [];
-gradientTop.classList.add('gradientTop');
 quizDiv.classList.add('trivia__quizDiv');
 quizTopDiv.classList.add('trivia__quizTop');
 
@@ -48,7 +45,7 @@ function displayQuestions(questions) {
         quizListDiv.appendChild(questionDiv);
         questionDiv.appendChild(answersDiv);
 
-        let answerID = 1;
+        let answerID = 0;
         element.answers.forEach(answer => {
 
             let name = 'answer-'+questionID;
@@ -77,13 +74,11 @@ function displayQuestions(questions) {
     quizDiv.appendChild(quizTopDiv);
     quizTopDiv.appendChild(startPageH2);
     quizTopDiv.appendChild(startPageDescription);
-    quizTopDiv.appendChild(gradientTop);
     quizDiv.appendChild(quizListDiv);
     quizDiv.appendChild(endQuizButton);
     containerDiv.appendChild(quizDiv);
 
-    endQuizButton.addEventListener('click', (e) => takeUsersAnswers(questions));
-    // endQuizButton.onclick = blabla;
+    endQuizButton.addEventListener('click', () => takeUsersAnswers(questions));
 
 
 }
