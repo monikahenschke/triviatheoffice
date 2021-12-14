@@ -31,7 +31,7 @@ body {
     /* max-width: 1200px; */
   }
 
-h1, h2 {
+h1, h2, .error-message {
     color: var(--white);
     text-align: center;
 }

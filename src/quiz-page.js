@@ -14,9 +14,14 @@ export function createQuizPage() {
         .then(response => response.json())
         .then(result => result.questions)
         .then(questions => displayQuestions(questions))
-        .catch(function (err){
-            return err;
-        })
+        .catch(() => displayError())
+}
+
+function displayError() {
+    const errorDiv = document.createElement('div');
+    errorDiv.innerHTML = '<p class="error-message">Unfortunately, something went wrong :(</p>';
+    errorDiv.classList.add('trivia__startPage');
+    containerDiv.appendChild(errorDiv);
 }
 
 
@@ -79,6 +84,5 @@ function displayQuestions(questions) {
     containerDiv.appendChild(quizDiv);
 
     endQuizButton.addEventListener('click', () => takeUsersAnswers(questions));
-
 
 }
